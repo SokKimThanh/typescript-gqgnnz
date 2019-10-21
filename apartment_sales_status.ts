@@ -24,7 +24,7 @@ interface Response {
 
 function add(request_url: RequestUrl): void {
     if (check_request_url(request_url)) {
-        getListObjectWithParams(request_url.table, request_url.cm, request_url.dt).then(function success(response: Reponse) {
+        getListObjectWithParams(request_url.table, request_url.cm, request_url.dt).then(function success(response: Response) {
             if (response.error === 0) {
                 close();
             } else {
