@@ -57,9 +57,13 @@ function detail(request_url: RequestUrl, type_of_action: TypeOfAction): void {
             } else {
                 //update. Config model to save
                 request_url = {
-                    table: "",
-                    cm: "",
-                    dt: JSON.stringify({})
+                    table: "apartment_sales_status",
+                    cm: "update",
+                    dt: JSON.stringify({
+                        "apartment_sales_status": { "apartment_sales_status_id": 0 },
+                        "company": { company_id: 100 },
+                        "languages": { language_id: 'vi' }
+                    })
                 }
                 update(request_url)
             }
@@ -69,9 +73,13 @@ function detail(request_url: RequestUrl, type_of_action: TypeOfAction): void {
             } else {
                 //add. Config model to show
                 request_url = {
-                    table: "",
-                    cm: "",
-                    dt: JSON.stringify({})
+                    table: "apartment_sales_status",
+                    cm: "add",
+                    dt: JSON.stringify({
+                        "apartment_sales_status": { "apartment_sales_status_id": 10000 },
+                        "company": { company_id: 100 },
+                        "languages": { language_id: 'vi' }
+                    })
                 }
                 add(request_url);
             }
