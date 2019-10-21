@@ -28,7 +28,7 @@ function add(request_url: RequestUrl): void {
             if (response.error === 0) {
                 close();
             } else {
-                throw new Error("Error add")
+                throw new Error("Error add", response.error)
             }
         }, function error(response: Response) {
             console.log("error_response", response.message)
