@@ -1,4 +1,4 @@
-class Student {
+class HocSinh {
     dateOfBirth: string;
     constructor(dateOfBirth: string) {
         this.dateOfBirth = dateOfBirth;
@@ -13,6 +13,6 @@ class Student {
 }
 
 var newdate = "04/06/1991";
-var thanhStudent = new Student(newdate);
+var thanhHocSinh = new HocSinh(newdate);
 
-alert(thanhStudent.changeDDMMYYYY(thanhStudent.happyBirthDay()));
+alert(thanhHocSinh.changeDDMMYYYY(thanhHocSinh.happyBirthDay()));

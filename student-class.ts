@@ -3,7 +3,8 @@ interface Person {
     lastName: string;
     fullName: string;
 }
-export class StudentClass {
+
+class StudentClass {
     fullName: string;
     constructor(public firstName: string, public middleInitial: string, public lastName: string) {
         this.fullName = `${firstName} ${middleInitial} ${lastName}`
@@ -15,16 +16,16 @@ export class StudentClass {
 let user = new StudentClass("Sok", "Kim", "Thanh");
 document.body.textContent = user.greeter(user);
 
-export class hocSinhGioi extends StudentClass {
+class StudentA extends StudentClass {
     fullName: string;
     constructor(public firstName: string, public middleInitial: string, public lastName: string) {
         super(firstName, middleInitial, lastName);
         this.fullName = `${firstName} ${middleInitial} ${lastName}`
     }
-    fuck() {
-        return "Fuck your mother"
+    howAreYou() {
+        return `Hi ${this.fullName}, how are you?`
     }
 }
-let user2 = new hocSinhGioi("Sok2", "Kim2", "Thanh2");
+let user2 = new StudentA("Sok", "Kim", "Thanh");
 document.body.textContent = user2.greeter(user2);
-document.body.textContent = user2.fuck();
+document.body.textContent = user2.howAreYou();
