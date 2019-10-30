@@ -1,16 +1,16 @@
-var waiting_time2 = function(in_so_nguyen: Function, milisecond: number) {
-    // scope argument milisecond
-    setTimeout(in_so_nguyen(milisecond), milisecond * 100);
+var waiting_time_out_side = function(print_number_in_side: Function, milisecond: number) {
+    // scope argument milisecond print_number
+    setTimeout(print_number_in_side(milisecond), milisecond * 100);
 }
 // Ensure
-var in_so_nguyen2 = function (i: number): void {
+var print_number = function (i: number): void {
     if (i) {
         console.log(i);
     }
 }
 for (var i = 0; i < 10; i++) {
     // scope var i
-    waiting_time((in_so_nguyen), i);
+    waiting_time_out_side((print_number), i);
 }
 // IIFE expression
 for (var i = 0; i < 10; i++) {
