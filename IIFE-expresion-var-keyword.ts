@@ -1,9 +1,9 @@
-function waiting_time(in_so_nguyen: Function, milisecond: number) {
+var waiting_time2 = function(in_so_nguyen: Function, milisecond: number) {
     // scope argument milisecond
     setTimeout(in_so_nguyen(milisecond), milisecond * 100);
 }
 // Ensure
-function in_so_nguyen(i: number): void {
+var in_so_nguyen2 = function (i: number): void {
     if (i) {
         console.log(i);
     }
